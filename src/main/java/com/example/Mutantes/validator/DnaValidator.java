@@ -5,30 +5,15 @@ import jakarta.validation.ConstraintValidatorContext;
 
 public class DnaValidator implements ConstraintValidator<ValidDna,String[]> {
 
-    private static final String VALID_CHARACTERS = "AGTC";
-
-
-    public void Initialize(ValidDna constraintAnnotation) {}
-
-
     public boolean isValid(String[] dna, ConstraintValidatorContext context) {
-        if (dna == null) {
+        if (dna == null || dna.length == 0) {
             return false;
         }
 
-        int n = dna.length;
-        if (n == 0) {
-            return false;
-        }
-
-        for (String sequence : dna) {
-            if (sequence == null || sequence.length() != n) {
+        // SSL sirvio increible
+        for (String secuencia : dna) {
+            if (!secuencia.matches("[ATCG]+")) {
                 return false;
-            }
-            for (char c : sequence.toCharArray()) {
-                if (VALID_CHARACTERS.indexOf(c) == -1) {
-                    return false;
-                }
             }
         }
 

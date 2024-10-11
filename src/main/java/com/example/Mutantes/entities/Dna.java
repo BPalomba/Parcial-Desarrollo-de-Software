@@ -1,19 +1,24 @@
 package com.example.Mutantes.entities;
 
-import com.example.Mutantes.entities.Base;
-import jakarta.persistence.*;
-import lombok.*;
-import java.io.Serializable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.envers.Audited;
+
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name ="DNA")
 @Getter
 @Setter
-@Builder
-public class Dna extends Base implements Serializable {
+@AllArgsConstructor
+@NoArgsConstructor
+@Audited
+public class Dna extends Base {
 
-    private String[] StringDna;
+    private String[] stringDna;
 
     private boolean isMutant;
 }

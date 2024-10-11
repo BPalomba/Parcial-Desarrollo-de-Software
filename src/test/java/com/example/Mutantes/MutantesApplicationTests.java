@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 class MutantesApplicationTests {
@@ -119,4 +120,31 @@ class MutantesApplicationTests {
 
 		assertEquals(true, DnaService.isMutant(dna));
 	}
+
+	@Test
+	void testTodasIguales(){
+		String[] dna = {
+				"AAAAA",
+				"AAAAA",
+				"AAAAA",
+				"AAAAA",
+				"AAAAA"
+		};
+
+		assertEquals(false, DnaService.isMutant(dna));
+	}
+
+	@Test
+	void testFalsa(){
+
+		String[] dna = {
+				"AAGAA",
+				"AATAA",
+				"ATCTG",
+				"AATAA",
+				"GAGAA"
+		};
+		assertEquals(false, DnaService.isMutant(dna));
+	}
+
 }

@@ -9,6 +9,6 @@ import lombok.Setter;
 public class DnaRequest {
 
     @ValidDna
-    private String[] StringDna;
+    private String[] stringDna;
 
 }
