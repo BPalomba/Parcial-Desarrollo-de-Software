@@ -1,6 +1,6 @@
 package com.example.Mutantes;
 
-import org.junit.jupiter.api.BeforeEach;
+import com.example.Mutantes.services.DnaService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,28 +10,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MutantesApplicationTests {
 
 	@Test
-	void testIsMutant() {
+	void testIsMutant3x3() {
 		String[] dna = {
 				"ATG",
 				"CGA",
 				"TGC"
 		};
-		assertEquals(false,Detector.isMutant(dna));
+		assertEquals(false, DnaService.isMutant(dna));
 	}
 
 	@Test
 	void testIsMutant1(){
 		String[] dnaTrue0 = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 
-		assertEquals(true,Detector.isMutant(dnaTrue0));
+		assertEquals(true, DnaService.isMutant(dnaTrue0));
 
 	}
 
 	@Test
-	void testIsMutant2(){
+	void testIsMutantColumna(){
 		String[] dnaTrue1 = {"ATCG","ATGC","ATGC","ATCG"};
 
-		assertEquals(true, Detector.isMutant(dnaTrue1));
+		assertEquals(true, DnaService.isMutant(dnaTrue1));
 	}
 
 	@Test
@@ -47,7 +47,7 @@ class MutantesApplicationTests {
 				"CGATAGCC"
 		};
 
-		assertEquals(true, Detector.isMutant(dna));
+		assertEquals(true, DnaService.isMutant(dna));
 	}
 
 	@Test
@@ -67,7 +67,7 @@ class MutantesApplicationTests {
 				"TCAAGGGTTTAA"
 		};
 
-		assertEquals(true, Detector.isMutant(dna));
+		assertEquals(true, DnaService.isMutant(dna));
 	}
 
 
@@ -91,7 +91,7 @@ class MutantesApplicationTests {
 				"GTCGGCAGTCGGCAT"
 		};
 
-		assertEquals(true, Detector.isMutant(dna));
+		assertEquals(true, DnaService.isMutant(dna));
 	}
 
 	@Test
@@ -103,7 +103,7 @@ class MutantesApplicationTests {
 				"CCCA"
 		};
 
-		assertEquals(true, Detector.isMutant(dna));
+		assertEquals(true, DnaService.isMutant(dna));
 	}
 
 
@@ -117,6 +117,6 @@ class MutantesApplicationTests {
 				"ACGAA"
 		};
 
-		assertEquals(true, Detector.isMutant(dna));
+		assertEquals(true, DnaService.isMutant(dna));
 	}
 }

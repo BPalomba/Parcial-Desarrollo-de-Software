@@ -1,21 +1,28 @@
-package com.example.Mutantes;
+package com.example.Mutantes.services;
 
-public class Detector {
+import com.example.Mutantes.repositories.DnaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DnaService {
+
+    private final DnaRepository dnaRepository;
+
+    @Autowired
+    public DnaService(DnaRepository dnaRepository) {
+        this.dnaRepository = dnaRepository;
+    }
+
+
 
     public static boolean isMutant(String[] dnaString){
-        boolean diagonalinf = false;
-        boolean diagonalsup = false;
-        boolean horizontal = false;
-        boolean vertical = false;
 
         //Inicializado en o
         char charRepetido = 'o';
         boolean posibleMutante = false;
 
         char[][] dna = new char[dnaString.length][];
-
-
-
 
 
 

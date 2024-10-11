@@ -1,6 +1,6 @@
 package com.example.Mutantes;
 
-import org.springframework.boot.SpringApplication;
+import com.example.Mutantes.services.DnaService;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -19,7 +19,7 @@ public class MutantesApplication {
 		long startTime = System.nanoTime();
 
 
-		if (Detector.isMutant(dnaString)){
+		if (DnaService.isMutant(dnaString)){
 			System.out.println("Es mutante");
 		} else {
 			System.out.println("No es mutante");
