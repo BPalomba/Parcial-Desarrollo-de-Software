@@ -2,10 +2,7 @@ package com.example.Mutantes.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.envers.Audited;
 
 
@@ -16,6 +13,7 @@ import org.hibernate.envers.Audited;
 @AllArgsConstructor
 @NoArgsConstructor
 @Audited
+@Builder
 public class Dna extends Base {
 
     private String[] stringDna;

@@ -24,10 +24,16 @@ public class DnaController {
 
     @PostMapping
     public ResponseEntity<DnaResponse> checkMutant(@Valid @RequestBody DnaRequest dnaRequest) {
-        boolean isMutant = dnaService.isMutant(dnaRequest.getStringDna());
+        boolean isMutant = dnaService.detector(dnaRequest.getStringDna());
         DnaResponse dnaResponse = new DnaResponse(isMutant);
 
-        return ResponseEntity.ok(dnaResponse);
+        if (isMutant) {
+            return ResponseEntity.ok(dnaResponse);
+
+        } else
+        {
+            return  ResponseEntity.status(HttpStatus.FORBIDDEN).body(dnaResponse);
+        }
 
     }
 

@@ -7,8 +7,9 @@ import java.util.Optional;
 
 @Repository
 public interface DnaRepository extends JpaRepository<Dna, Long> {
-    //Busca en la db si ya existe el adn
-    Optional<Dna> findByStringDna(String dnaSequence[]);
+    //Busca en la db el adn
+    Optional<Dna> findByStringDna(String stringDna[]);
 
-   // long countByIsMutant(boolean isMutant);
+    //Cuenta cuantos adn son verdaderos o falsos
+    long countByIsMutant(boolean isMutant);
 }

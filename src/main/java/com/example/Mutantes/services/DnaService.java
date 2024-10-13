@@ -1,8 +1,13 @@
 package com.example.Mutantes.services;
 
+import com.example.Mutantes.entities.Dna;
 import com.example.Mutantes.repositories.DnaRepository;
+import org.hibernate.envers.boot.EnversBootLogger_$logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.swing.text.html.Option;
+import java.util.Optional;
 
 @Service
 public class DnaService {
@@ -15,7 +20,7 @@ public class DnaService {
     }
 
 
-
+    // Metodo que contiene el algoritmo para detectar mutantes
     public static boolean isMutant(String[] dnaString){
 
         //Inicializado en o
@@ -360,6 +365,29 @@ public class DnaService {
         }
 
         return false;
+    }
+
+    // Verifica si el ADN ya existe en la base de datos
+    // Sino usa isMutant(), crea el Dna y lo persiste
+    public boolean detector(String[] stringDna){
+
+        Optional<Dna> dnaPresente = dnaRepository.findByStringDna(stringDna);
+
+        if(dnaPresente.isPresent()){
+            return dnaPresente.get().isMutant();
+        } else {
+
+            boolean isMutant = isMutant(stringDna);
+
+            Dna dnaEntity = Dna.builder()
+                    .stringDna(stringDna)
+                    .isMutant(isMutant)
+                    .build();
+
+            dnaRepository.save(dnaEntity);
+
+            return isMutant;
+        }
     }
 
 }
