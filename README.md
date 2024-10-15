@@ -5,7 +5,7 @@ Este proyecto consta de una API REST ,deployada en render,con una arquitectura d
 La funcionalidad de este proyecto es recibir array de Strings de longitud MxM, las cuales contienen los caracteres A,C,T,G
 y detectar si hay mas de una coincidencia de 4 letras consecutivas, verificando asi si son mutantes o humanos. 
 
-La api consta de dos endpoints /mutants que ejecuta el algoritmo de deteccion de mutantes y /stats que muestra la cantidad de mutantes o humanods detectadso y su ratio.
+La api consta de dos endpoints, /mutants que ejecuta el algoritmo de deteccion de mutantes y /stats que muestra la cantidad de mutantes o humanos detectados y su ratio.
 
 <h1> 🌐 Enunciado del trabajo </h1>
 
