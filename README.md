@@ -108,12 +108,4 @@ Ejemplo
 
 ```
 
-
-
-
-
-
-
-
-🎓
-
+Bruno Palombarini 3K10
