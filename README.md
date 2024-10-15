@@ -1,6 +1,6 @@
 <h1> 📋 Descripción del Proyecto </h1>
 
-Este proyecto consta de una API REST con una arquitectura de tres capas, servicios, controladores y repositorios, implementando adecuadamente DTO.
+Este proyecto consta de una API REST ,deployada en render,con una arquitectura de tres capas, servicios, controladores y repositorios, implementando adecuadamente DTO.
 
 La funcionalidad de este proyecto es recibir array de Strings de longitud MxM, las cuales contienen los caracteres A,C,T,G
 y detectar si hay mas de una coincidencia de 4 letras consecutivas, verificando asi si son mutantes o humanos. 
