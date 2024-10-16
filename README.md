@@ -129,7 +129,7 @@ Los elementos "D" chequearan las 4 DIAGONALES.
 ![image](https://github.com/user-attachments/assets/00f58535-e7c4-461a-af20-08c217217f58)
 
 Ahora supongamos que tenemos una matrix NxN, en las filas pares y columnas impares corresponderia un elemento "X", en las filas impares y columnas impares tambien corresponde un elemento "X",
-y añadiremos elementos "D", segun corresponda intercalando cada 4 filas.
+y añadiremos elementos "D" segun corresponda cada 3 filas.
 
 Aqui un ejemplo de como quedaria para una matriz 7x7.
 
