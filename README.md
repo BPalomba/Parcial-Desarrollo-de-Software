@@ -108,4 +108,36 @@ Ejemplo
 
 ```
 
+<h2>👾 Algoritmo </h2>
+
+El algoritmo basicamente consiste en la verificacion de la celda n+2, si esta es coincidente con la celda n, verifica la celda n, en caso de ser verdad se verifica la celda n+3 si esta es distinta verificaria la celda n-1
+
+En un ejemplo simple imaginemos que empezamos en la celda n°1, las verificaciones serian en orden numerico, si se dan las condiciones. 
+
+![image](https://github.com/user-attachments/assets/a991cc70-e6b7-4162-ac49-42a38a6be190)
+
+Este "patron" se aplica de forma vertical, horizontal y diagonal segun convenga.
+
+Para el desarrollo del algoritmo implemente dos elementos "X" y "D".
+
+Los elementos "X" chequearan la DIAGONAL superior derecha, HORIZONTAL derecha, DIAGONAL inferior derecha y VERTICAL inferior.
+
+![image](https://github.com/user-attachments/assets/70bba4ef-36a5-4c90-8a49-f1fb5c8b2848)
+
+Los elementos "D" chequearan las 4 DIAGONALES.
+
+![image](https://github.com/user-attachments/assets/00f58535-e7c4-461a-af20-08c217217f58)
+
+Ahora supongamos que tenemos una matrix NxN, en las filas pares y columnas impares corresponderia un elemento "X", en las filas impares y columnas impares tambien corresponde un elemento "X",
+y añadiremos elementos "D", segun corresponda intercalando cada 4 filas.
+
+Aqui un ejemplo de como quedaria para una matriz 7x7.
+
+![image](https://github.com/user-attachments/assets/08cbd200-a5d7-466a-8680-efed3e403dcf)
+
+
+
+
+
+
 Bruno Palombarini 3K10
