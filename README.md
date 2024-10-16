@@ -137,8 +137,16 @@ Aqui un ejemplo de como quedaria para una matriz 7x7.
 
 ![image](https://github.com/user-attachments/assets/08cbd200-a5d7-466a-8680-efed3e403dcf)
 
+<h1>🔸 Diagrama de secuencia </h1>
 
 
+<h3> Si el DNA pedido ya existe en la base de datos</h3>
+
+![Diagrama de secuencai  Mutantes Existe el ADN](https://github.com/user-attachments/assets/cc1699b5-fae2-4e80-a5d1-91673e52d1f8)
+
+<h3> Si el DNA pedido no existe en la base de datos y debe ser verificado</h3>
+
+![Secuencia  Mutantes no existe el ADN](https://github.com/user-attachments/assets/ce9aa70a-ee5f-4864-8ccc-2aaa951d1b78)
 
 
 
