@@ -96,6 +96,8 @@ Aqui un ejemplo de un DNA humano.
 
 Si enviamos una peticion al siguiente link, nos devolvera en formato Json, la cantidad de mutantes y humanos detectados, asi como su proporcion.
 
+https://parcial-desarrollo-de-software.onrender.com/stats
+
 Ejemplo
 
 ```json
