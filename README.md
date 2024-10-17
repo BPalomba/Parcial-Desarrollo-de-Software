@@ -148,6 +148,11 @@ Aqui un ejemplo de como quedaria para una matriz 7x7.
 
 ![Secuencia  Mutantes no existe el ADN](https://github.com/user-attachments/assets/ce9aa70a-ee5f-4864-8ccc-2aaa951d1b78)
 
+<h3> Uso del endpoint /stats </h3>
+
+![Secuencia  Stats](https://github.com/user-attachments/assets/ea43419d-d6bd-42ce-a811-4fef49b3c8db)
+
+
 
 
 Bruno Palombarini 3K10
